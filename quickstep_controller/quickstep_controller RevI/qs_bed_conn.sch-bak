@@ -1,0 +1,166 @@
+EESchema Schematic File Version 4
+LIBS:quickstep_controller-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 15
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x13_Odd_Even J1101
+U 1 1 5E7287A2
+P 5750 4050
+F 0 "J1101" H 5800 4950 50  0000 C CNN
+F 1 "Conn_02x13_Odd_Even" H 5800 4850 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical" H 5750 4050 50  0001 C CNN
+F 3 "~" H 5750 4050 50  0001 C CNN
+	1    5750 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3550 6150 3550
+Wire Wire Line
+	6150 5000 6900 5000
+Wire Wire Line
+	5550 3550 5450 3550
+Wire Wire Line
+	5450 3550 5450 3650
+Wire Wire Line
+	5450 5100 6900 5100
+Wire Wire Line
+	6150 3850 6150 3950
+Wire Wire Line
+	6150 3750 6150 3850
+Connection ~ 6150 3850
+Wire Wire Line
+	6150 3850 6050 3850
+Wire Wire Line
+	6150 3750 6050 3750
+Connection ~ 6150 3750
+Wire Wire Line
+	6150 3650 6150 3750
+Wire Wire Line
+	6150 3650 6050 3650
+Connection ~ 6150 3650
+Wire Wire Line
+	6150 3550 6150 3650
+Wire Wire Line
+	6150 3950 6050 3950
+Connection ~ 6150 3950
+Wire Wire Line
+	6150 3950 6150 4050
+Wire Wire Line
+	6150 4050 6050 4050
+Connection ~ 6150 4050
+Wire Wire Line
+	6150 4050 6150 4150
+Wire Wire Line
+	6150 4150 6050 4150
+Connection ~ 6150 4150
+Wire Wire Line
+	6150 4150 6150 4250
+Wire Wire Line
+	6150 4250 6050 4250
+Connection ~ 6150 4250
+Wire Wire Line
+	6150 4250 6150 4350
+Wire Wire Line
+	6150 4350 6050 4350
+Connection ~ 6150 4350
+Wire Wire Line
+	6150 4350 6150 4450
+Wire Wire Line
+	6150 4450 6050 4450
+Connection ~ 6150 4450
+Wire Wire Line
+	6150 4450 6150 4550
+Wire Wire Line
+	6150 4550 6050 4550
+Connection ~ 6150 4550
+Wire Wire Line
+	6150 4550 6150 4650
+Wire Wire Line
+	6150 4650 6050 4650
+Connection ~ 6150 4650
+Wire Wire Line
+	6150 4650 6150 5000
+Wire Wire Line
+	5550 3650 5450 3650
+Connection ~ 5450 3650
+Wire Wire Line
+	5450 3650 5450 3750
+Wire Wire Line
+	5550 3750 5450 3750
+Connection ~ 5450 3750
+Wire Wire Line
+	5450 3750 5450 3850
+Wire Wire Line
+	5450 3850 5550 3850
+Connection ~ 5450 3850
+Wire Wire Line
+	5450 3850 5450 3950
+Wire Wire Line
+	5550 3950 5450 3950
+Connection ~ 5450 3950
+Wire Wire Line
+	5450 3950 5450 4050
+Wire Wire Line
+	5550 4050 5450 4050
+Connection ~ 5450 4050
+Wire Wire Line
+	5450 4050 5450 4150
+Wire Wire Line
+	5550 4150 5450 4150
+Connection ~ 5450 4150
+Wire Wire Line
+	5450 4150 5450 4250
+Wire Wire Line
+	5550 4250 5450 4250
+Connection ~ 5450 4250
+Wire Wire Line
+	5450 4250 5450 4350
+Wire Wire Line
+	5550 4350 5450 4350
+Connection ~ 5450 4350
+Wire Wire Line
+	5450 4350 5450 4450
+Wire Wire Line
+	5550 4450 5450 4450
+Connection ~ 5450 4450
+Wire Wire Line
+	5450 4450 5450 4550
+Wire Wire Line
+	5550 4550 5450 4550
+Connection ~ 5450 4550
+Wire Wire Line
+	5550 4650 5450 4650
+Wire Wire Line
+	5450 4550 5450 4650
+Connection ~ 5450 4650
+Wire Wire Line
+	5450 4650 5450 5100
+Wire Wire Line
+	6050 3450 6900 3450
+Wire Wire Line
+	5550 3450 5450 3450
+Wire Wire Line
+	5450 3450 5450 3350
+Wire Wire Line
+	5450 3350 6900 3350
+Text HLabel 6900 5100 2    50   Input ~ 0
+BED-
+Text HLabel 6900 5000 2    50   Input ~ 0
+BED+
+Text HLabel 6900 3350 2    50   Input ~ 0
+THERM+
+Text HLabel 6900 3450 2    50   Input ~ 0
+THERM-
+$EndSCHEMATC

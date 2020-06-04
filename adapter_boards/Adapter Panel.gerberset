@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GerberLayoutSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LoadedOutlines>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\extruder_breakout\Extruder Breakout Gerbers - 3-27-1600.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\heatbed_breakout\Heatbed Breakout 3-27-1601.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\Placeholder Board\Placeholder Gerbers 3-27-1559.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\RGB_endstop_breakout\Strip Y-Stop Breakout - 3-27-1602.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\USB Adapter\USB Adapter Gerbers 3-27-1528.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\y-z_motor_breakout\Y-Z Stop Breakout Gerbers - 3-27-1603.zip</string>
+    <string>D:\Documents\Projects\stepUP Electronics 2-0\stepUP LCD Panel\stepUP_lcd\Encoder Daughterboard\Encoder Breakout Gerbers 3-27-1531.zip</string>
+  </LoadedOutlines>
+  <Instances>
+    <GerberInstance>
+      <Center>
+        <X>84</X>
+        <Y>17</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\extruder_breakout\Extruder Breakout Gerbers - 3-27-1600.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>74</X>
+        <Y>89</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\heatbed_breakout\Heatbed Breakout 3-27-1601.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>57</X>
+        <Y>10</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\Placeholder Board\Placeholder Gerbers 3-27-1559.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>20</X>
+        <Y>24</Y>
+      </Center>
+      <Angle>180</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\RGB_endstop_breakout\Strip Y-Stop Breakout - 3-27-1602.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>86</X>
+        <Y>8</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\USB Adapter\USB Adapter Gerbers 3-27-1528.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>51</X>
+        <Y>62</Y>
+      </Center>
+      <Angle>180</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\y-z_motor_breakout\Y-Z Stop Breakout Gerbers - 3-27-1603.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>57</X>
+        <Y>25</Y>
+      </Center>
+      <Angle>-90</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\stepUP LCD Panel\stepUP_lcd\Encoder Daughterboard\Encoder Breakout Gerbers 3-27-1531.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>23</X>
+        <Y>62</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>D:\Documents\Projects\stepUP Electronics 2-0\adapter_boards\y-z_motor_breakout\Y-Z Stop Breakout Gerbers - 3-27-1603.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+  </Instances>
+  <Tabs>
+    <BreakTab>
+      <Center>
+        <X>37.17285</X>
+        <Y>63.0562019</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>22.9713688</X>
+        <Y>80.46448</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>50.8016968</X>
+        <Y>80.69353</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>75</X>
+        <Y>69</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>68.32449</X>
+        <Y>61.45281</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>68</X>
+        <Y>29</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>79</X>
+        <Y>15</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>89</X>
+        <Y>15</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>45.75</X>
+        <Y>29</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>20</X>
+        <Y>43.25</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>52.176033</X>
+        <Y>43.0137863</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+    <BreakTab>
+      <Center>
+        <X>57</X>
+        <Y>14</Y>
+      </Center>
+      <Angle>0</Angle>
+      <Radius>3</Radius>
+      <Valid>false</Valid>
+    </BreakTab>
+  </Tabs>
+  <Width>100</Width>
+  <Height>100</Height>
+  <MarginBetweenBoards>2</MarginBetweenBoards>
+  <ConstructNegativePolygon>false</ConstructNegativePolygon>
+  <FillOffset>3</FillOffset>
+  <Smoothing>1</Smoothing>
+  <ExtraTabDrillDistance>0</ExtraTabDrillDistance>
+  <ClipToOutlines>false</ClipToOutlines>
+  <LastExportFolder>D:\Desktop\Merged Gerbers 2</LastExportFolder>
+  <DoNotGenerateMouseBites>false</DoNotGenerateMouseBites>
+  <MergeFileTypes>true</MergeFileTypes>
+</GerberLayoutSet>

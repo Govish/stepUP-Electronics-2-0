@@ -1,0 +1,102 @@
+3D Printer Controller Pin Mapping
+
+//============== MOTOR PINS =============
+X_STEP - 22
+X_DIR - 23
+X_EN - 24
+X_CS - 25
+X_DIAG_0 - 26
+X_DIAG_1 - 27
+
+Y_STEP - 28
+Y-DIR - 29
+Y_EN - 30
+Y-CS - 31
+Y_DIAG_0 - 32
+Y_DIAG_1 - 33
+
+Z_STEP - 34
+Z_DIR - 35
+Z_EN - 36
+Z_CS - 37
+Z_DIAG_0 - 38
+Z_DIAG_1 - 39
+
+E_STEP - 40
+E_DIR - 41
+E_EN - 42
+E_CS - 43
+E_DIAG_0 - 44
+E_DIAG_1 - 45
+
+//============== LIMIT SWITCH ==============
+X_MAX - 46
+Y_MIN - 47
+Z_MAX - 48
+FIL_SEN - 49
+
+//=============== TEMP CONTROL ================
+EXT_THERM - A0
+BED_THERM - A1
+
+EXT_HEATER - 7
+BED_HEATER - 9
+
+PRINT_COOLING_FAN - 8
+
+//===================== SD/SPI PINS ======================
+/*
+ * all stepper drivers and SD Card will be on the SPI bus
+ * these need to be confirmed
+ * all the SPI lines from the ICSP header
+ */
+
+SD_MOSI - 51
+SD_MISO - 50
+SD_SCK - 52
+SD_CS - 17 
+SD_CD - 16
+
+//================= I2C_BUS (reserved) =================
+//eeprom (24LC256 or similar, b1010000) and LCD panel will be on the I2C bus
+SDA_PIN - 20 (but route from SDA pin)
+SCL_PIN - 21 (but route from SCL pin)
+
+//================ UART pins (reserved) ================
+Serial1_TX - 1
+Serial1_RX - 0
+
+Serial2_TX - 18	//connect to ESP32 Rx
+Serial2_RX - 19	//connect to ESP32 Tx
+
+//================= LCD CONTROLLER PINS ================
+ENCODER_A - 15
+ENCODER_B - 14
+ENCODER_CLICK  - -1
+
+
+//===================== MISC_PINS ======================
+PS_ON - 2
+LED_PIN - 13 //diag
+
+LED_RED - 10
+LED_GREEN - 11
+LED_BLUE - 12
+
+
+//====================================################### ESP-32 PINS ###################======================================
+//========== SD INTERFACE (Slot 1) ==========
+// pull up all these lines with 10K
+D0 - 7
+D1 - 8
+D2 - 9
+D3 - 10
+CMD - 11
+CLK - 6
+
+SERIAL_2_TX - 17 (wire to RX on arduino)
+SERIAL_2_RX - 16 (wire to TX on arduino)
+
+//for the SD card multiplexing
+CD - 0
+SD_SELECT - 2

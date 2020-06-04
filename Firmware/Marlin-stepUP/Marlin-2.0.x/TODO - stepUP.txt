@@ -1,0 +1,24 @@
+========== for custom LCD LEDs =============
+ in ultralcd_HD44780.h lines 63-65:
+X	- change LED_A/B/C to appropriate masks corresponding to
+	  controller pin masks
+ in ultralcd_HD44780.cpp lines 1076-1121:
+X	- change all the LED turn-on conditionals to things I care about
+X		- thermalManager.degBed and thermalManager.degHotend(0)
+X		- card.isMounted()
+X		- X_ENABLE_ON, Y_ENABLE_ON, Z_ENABLE_ON, E_ENABLE_ON (might have to include a header)
+
+========== for automatic power control ===========
+X - when drivers are enabled (CHECK HOMING AND G0/G1) 
+X - when extruder temp is set 
+X - when bed temp is set 
+
+===== LCD INTERFACE ====
+X - fix status LEDs
+X - fix bug with MEDIA RELEASED button
+X - fix switch POWER OFF button
+X - possibly fix double click issue (watch how BUTTON_CLICKED works, esp with slow buttons!)
+
+===== MISC ====
+X - reupload with fixed y-dimension and fil sensor polarity
+X - Add "Cold pull" in filament change menu (automated heat, extrusion, cooling to 100C

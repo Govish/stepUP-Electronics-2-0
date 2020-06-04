@@ -1,0 +1,383 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 6550 2750 0    50   Input ~ 0
+R_PWM
+$Comp
+L Device:R R?
+U 1 1 5E6EE7A4
+P 6900 2750
+AR Path="/5E37B32D/5E6EE7A4" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6EE7A4" Ref="R?"  Part="1" 
+F 0 "R?" V 6693 2750 50  0000 C CNN
+F 1 "390" V 6784 2750 50  0000 C CNN
+F 2 "" V 6830 2750 50  0001 C CNN
+F 3 "~" H 6900 2750 50  0001 C CNN
+	1    6900 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
+U 1 1 5E6EE7AA
+P 7450 2750
+AR Path="/5E37B32D/5E6EE7AA" Ref="Q?"  Part="1" 
+AR Path="/5E6D6F0D/5E6EE7AA" Ref="Q?"  Part="1" 
+F 0 "Q?" H 7656 2796 50  0000 L CNN
+F 1 "NTR3C21NZT1G" H 7656 2705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7650 2850 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/75129/sqj479ep.pdf" H 7450 2750 50  0001 C CNN
+	1    7450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6EE7B0
+P 7350 3050
+AR Path="/5E37B32D/5E6EE7B0" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6EE7B0" Ref="R?"  Part="1" 
+F 0 "R?" V 7250 3050 50  0000 C CNN
+F 1 "240K" V 7450 3050 50  0000 C CNN
+F 2 "" V 7280 3050 50  0001 C CNN
+F 3 "~" H 7350 3050 50  0001 C CNN
+	1    7350 3050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7150 2750 7150 3050
+Wire Wire Line
+	7150 3050 7200 3050
+Wire Wire Line
+	7550 2950 7550 3050
+Wire Wire Line
+	7550 3050 7500 3050
+Wire Wire Line
+	7050 2750 7150 2750
+Connection ~ 7150 2750
+Wire Wire Line
+	7150 2750 7250 2750
+Wire Wire Line
+	6550 2750 6750 2750
+Wire Wire Line
+	7550 3150 7550 3050
+Connection ~ 7550 3050
+$Comp
+L power:GND #PWR?
+U 1 1 5E6EE7C0
+P 7550 3150
+AR Path="/5E37B32D/5E6EE7C0" Ref="#PWR?"  Part="1" 
+AR Path="/5E6D6F0D/5E6EE7C0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7550 2900 50  0001 C CNN
+F 1 "GND" H 7555 2977 50  0000 C CNN
+F 2 "" H 7550 3150 50  0001 C CNN
+F 3 "" H 7550 3150 50  0001 C CNN
+	1    7550 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 2450 7550 2450
+Wire Wire Line
+	7550 2450 7550 2550
+Text HLabel 6550 3900 0    50   Input ~ 0
+G_PWM
+$Comp
+L Device:R R?
+U 1 1 5E6F0EF6
+P 6900 3900
+AR Path="/5E37B32D/5E6F0EF6" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F0EF6" Ref="R?"  Part="1" 
+F 0 "R?" V 6693 3900 50  0000 C CNN
+F 1 "390" V 6784 3900 50  0000 C CNN
+F 2 "" V 6830 3900 50  0001 C CNN
+F 3 "~" H 6900 3900 50  0001 C CNN
+	1    6900 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
+U 1 1 5E6F0EFC
+P 7450 3900
+AR Path="/5E37B32D/5E6F0EFC" Ref="Q?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F0EFC" Ref="Q?"  Part="1" 
+F 0 "Q?" H 7656 3946 50  0000 L CNN
+F 1 "NTR3C21NZT1G" H 7656 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7650 4000 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/75129/sqj479ep.pdf" H 7450 3900 50  0001 C CNN
+	1    7450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6F0F02
+P 7350 4200
+AR Path="/5E37B32D/5E6F0F02" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F0F02" Ref="R?"  Part="1" 
+F 0 "R?" V 7250 4200 50  0000 C CNN
+F 1 "240K" V 7450 4200 50  0000 C CNN
+F 2 "" V 7280 4200 50  0001 C CNN
+F 3 "~" H 7350 4200 50  0001 C CNN
+	1    7350 4200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7150 3900 7150 4200
+Wire Wire Line
+	7150 4200 7200 4200
+Wire Wire Line
+	7550 4100 7550 4200
+Wire Wire Line
+	7550 4200 7500 4200
+Wire Wire Line
+	7050 3900 7150 3900
+Connection ~ 7150 3900
+Wire Wire Line
+	7150 3900 7250 3900
+Wire Wire Line
+	6550 3900 6750 3900
+Wire Wire Line
+	7550 4300 7550 4200
+Connection ~ 7550 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5E6F0F12
+P 7550 4300
+AR Path="/5E37B32D/5E6F0F12" Ref="#PWR?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F0F12" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7550 4050 50  0001 C CNN
+F 1 "GND" H 7555 4127 50  0000 C CNN
+F 2 "" H 7550 4300 50  0001 C CNN
+F 3 "" H 7550 4300 50  0001 C CNN
+	1    7550 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3600 7550 3600
+Wire Wire Line
+	7550 3600 7550 3700
+Text HLabel 6550 5000 0    50   Input ~ 0
+B_PWM
+$Comp
+L Device:R R?
+U 1 1 5E6F2624
+P 6900 5000
+AR Path="/5E37B32D/5E6F2624" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F2624" Ref="R?"  Part="1" 
+F 0 "R?" V 6693 5000 50  0000 C CNN
+F 1 "390" V 6784 5000 50  0000 C CNN
+F 2 "" V 6830 5000 50  0001 C CNN
+F 3 "~" H 6900 5000 50  0001 C CNN
+	1    6900 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
+U 1 1 5E6F262A
+P 7450 5000
+AR Path="/5E37B32D/5E6F262A" Ref="Q?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F262A" Ref="Q?"  Part="1" 
+F 0 "Q?" H 7656 5046 50  0000 L CNN
+F 1 "NTR3C21NZT1G" H 7656 4955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7650 5100 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/75129/sqj479ep.pdf" H 7450 5000 50  0001 C CNN
+	1    7450 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6F2630
+P 7350 5300
+AR Path="/5E37B32D/5E6F2630" Ref="R?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F2630" Ref="R?"  Part="1" 
+F 0 "R?" V 7250 5300 50  0000 C CNN
+F 1 "240K" V 7450 5300 50  0000 C CNN
+F 2 "" V 7280 5300 50  0001 C CNN
+F 3 "~" H 7350 5300 50  0001 C CNN
+	1    7350 5300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7150 5000 7150 5300
+Wire Wire Line
+	7150 5300 7200 5300
+Wire Wire Line
+	7550 5200 7550 5300
+Wire Wire Line
+	7550 5300 7500 5300
+Wire Wire Line
+	7050 5000 7150 5000
+Connection ~ 7150 5000
+Wire Wire Line
+	7150 5000 7250 5000
+Wire Wire Line
+	6550 5000 6750 5000
+Wire Wire Line
+	7550 5400 7550 5300
+Connection ~ 7550 5300
+$Comp
+L power:GND #PWR?
+U 1 1 5E6F2640
+P 7550 5400
+AR Path="/5E37B32D/5E6F2640" Ref="#PWR?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F2640" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7550 5150 50  0001 C CNN
+F 1 "GND" H 7555 5227 50  0000 C CNN
+F 2 "" H 7550 5400 50  0001 C CNN
+F 3 "" H 7550 5400 50  0001 C CNN
+	1    7550 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4700 7550 4700
+Wire Wire Line
+	7550 4700 7550 4800
+$Comp
+L Memory_EEPROM:24LC256 U?
+U 1 1 5E6F4B13
+P 4300 3900
+AR Path="/5E37B4DC/5E6F4B13" Ref="U?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F4B13" Ref="U?"  Part="1" 
+F 0 "U?" H 4550 3650 50  0000 C CNN
+F 1 "24LC256" H 4100 4150 50  0000 C CNN
+F 2 "" H 4300 3900 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21203m.pdf" H 4300 3900 50  0001 C CNN
+	1    4300 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6F4B19
+P 4800 4350
+AR Path="/5E37B4DC/5E6F4B19" Ref="#PWR?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F4B19" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4800 4100 50  0001 C CNN
+F 1 "GND" H 4805 4177 50  0000 C CNN
+F 2 "" H 4800 4350 50  0001 C CNN
+F 3 "" H 4800 4350 50  0001 C CNN
+	1    4800 4350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3800 4800 3800
+Wire Wire Line
+	4800 3800 4800 3900
+Wire Wire Line
+	4700 3900 4800 3900
+Connection ~ 4800 3900
+Wire Wire Line
+	4800 3900 4800 4000
+Wire Wire Line
+	4700 4000 4800 4000
+Connection ~ 4800 4000
+Wire Wire Line
+	4800 4000 4800 4300
+Wire Wire Line
+	4800 4300 4300 4300
+Wire Wire Line
+	3800 4300 3800 4000
+Wire Wire Line
+	3800 4000 3900 4000
+Connection ~ 4800 4300
+Wire Wire Line
+	4800 4300 4800 4350
+Wire Wire Line
+	4300 4200 4300 4300
+Connection ~ 4300 4300
+Wire Wire Line
+	4300 4300 3800 4300
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E6F4B2F
+P 4800 3500
+AR Path="/5E37B4DC/5E6F4B2F" Ref="#PWR?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F4B2F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4800 3350 50  0001 C CNN
+F 1 "+3.3V" H 4815 3673 50  0000 C CNN
+F 2 "" H 4800 3500 50  0001 C CNN
+F 3 "" H 4800 3500 50  0001 C CNN
+	1    4800 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3500 4800 3550
+Wire Wire Line
+	4800 3550 4300 3550
+Wire Wire Line
+	4300 3550 4300 3600
+$Comp
+L Device:C C?
+U 1 1 5E6F4B38
+P 5050 3900
+AR Path="/5E37B4DC/5E6F4B38" Ref="C?"  Part="1" 
+AR Path="/5E6D6F0D/5E6F4B38" Ref="C?"  Part="1" 
+F 0 "C?" H 4935 3854 50  0000 R CNN
+F 1 "100n" H 4935 3945 50  0000 R CNN
+F 2 "" H 5088 3750 50  0001 C CNN
+F 3 "~" H 5050 3900 50  0001 C CNN
+	1    5050 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 4050 5050 4300
+Wire Wire Line
+	5050 4300 4800 4300
+Wire Wire Line
+	5050 3750 5050 3550
+Wire Wire Line
+	5050 3550 4800 3550
+Connection ~ 4800 3550
+Wire Wire Line
+	3200 3800 3900 3800
+Wire Wire Line
+	3200 3900 3900 3900
+Text Label 3500 3800 0    50   ~ 0
+SDA
+Text Label 3500 3900 0    50   ~ 0
+SCL
+Text HLabel 3200 3800 0    50   Input ~ 0
+DUE_SDA
+Text HLabel 3200 3900 0    50   Input ~ 0
+DUE_SCL
+Text Label 8250 2450 2    50   ~ 0
+R_DRAIN
+Text Label 8250 3600 2    50   ~ 0
+G_DRAIN
+Text Label 8250 4700 2    50   ~ 0
+B_DRAIN
+Text HLabel 8450 2450 2    50   Input ~ 0
+R_DRAIN
+Text HLabel 8450 3600 2    50   Input ~ 0
+G_DRAIN
+Text HLabel 8450 4700 2    50   Input ~ 0
+B_DRAIN
+Wire Notes Line
+	6050 2100 9050 2100
+Wire Notes Line
+	9050 2100 9050 5950
+Wire Notes Line
+	9050 5950 6050 5950
+Wire Notes Line
+	6050 5950 6050 2100
+Text Notes 7700 5900 0    100  ~ 0
+RGB LED Control
+Wire Notes Line
+	2650 3100 5550 3100
+Wire Notes Line
+	5550 3100 5550 4850
+Wire Notes Line
+	5550 4850 2650 4850
+Wire Notes Line
+	2650 4850 2650 3100
+Text Notes 4550 4800 0    100  ~ 0
+I2C EEPROM
+$EndSCHEMATC

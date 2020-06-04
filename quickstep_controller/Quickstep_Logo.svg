@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Quickstep_Logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="367.64552"
+     inkscape:cy="363.36093"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g931"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+       id="g958"
+       transform="matrix(25.4,0,0,25.4,-1514.3422,974.46856)">
+      <g
+         id="g931"
+         transform="scale(1,-1)">
+        <!-- Polyline -->
+        <!-- Polyline -->
+        <g
+           id="g962"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.00393701;stroke-miterlimit:4;stroke-dasharray:none"
+           transform="matrix(0.03937008,0,0,0.03937008,61.976397,28.854875)"
+           inkscape:export-xdpi="600"
+           inkscape:export-ydpi="600">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 43.6912,36.4482 a 4,4 0 0 1 1.1716,-2.8284 L 56.277,22.2056 a 2,2 0 0 1 3.4142,1.4142 v 48.201 a 10,10 0 0 1 -10,10 h -60 a 10,10 0 0 1 -10,-10 v -60 a 10,10 0 0 1 10,-10 h 48.201 A 2,2 0 0 1 39.3064,5.235 L 27.8922,16.6492 a 4,4 0 0 1 -2.8284,1.1716 H -1.8088 a 2.5,2.5 0 0 0 -2.5,2.5 v 43 a 2.5,2.5 0 0 0 2.5,2.5 h 43 a 2.5,2.5 0 0 0 2.5,-2.5 z"
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.00393701;stroke-miterlimit:4;stroke-dasharray:none"
+             id="path899" />
+          <path
+             inkscape:connector-curvature="0"
+             d="m 41.4486,31.3771 a 2,2 0 0 1 -1.4143,0.5858 h -7.9852 a 2.5,2.5 0 0 1 -2.5,-2.5 v -7.9852 a 2,2 0 0 1 0.5858,-1.4143 l 17.071,-17.071 a 4,4 0 0 1 2.8284,-1.1716 h 51.6569 a 10,10 0 0 1 10,10 v 20 a 10,10 0 0 1 -10,10 h -19.5 a 2.5,2.5 0 0 0 -2.5,2.5 v 3 a 2.5,2.5 0 0 0 2.5,2.5 h 27 a 2.5,2.5 0 0 1 2.5,2.5 v 11 a 2.5,2.5 0 0 1 -2.5,2.5 h -35.5 a 10,10 0 0 1 -10,-10 v -20 a 10,10 0 0 1 10,-10 h 19.5 a 2.5,2.5 0 0 0 2.5,-2.5 v -3 a 2.5,2.5 0 0 0 -2.5,-2.5 H 55.8333 a 2,2 0 0 0 -1.4142,0.5858 z"
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.00393701;stroke-miterlimit:4;stroke-dasharray:none"
+             id="path901" />
+        </g>
+        <!-- Text: QCAD.org
+Trial Version
+Random lines added -->
+        <!-- Line -->
+        <!-- Line -->
+        <!-- Line -->
+        <!-- Text: QCAD.org
+Trial Version
+Random lines added -->
+        <!-- Line -->
+        <!-- Line -->
+        <!-- Line -->
+      </g>
+    </g>
+  </g>
+</svg>

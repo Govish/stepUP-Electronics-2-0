@@ -1,0 +1,21 @@
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
+1,1,BZ1,Buzzer,Device:Buzzer,Custom-Electromechanical:Buzzer_CUI_CPT9019S,~
+2,2,"C2, C3",100n,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+3,3,"D1, D2, D3",LED,Device:LED,Custom-DiscreteSemi:LED_1206ReverseMount,~
+4,1,G101,Stepper Icon,Custom-Misc:Graphic_Placeholder,Custom-Graphics:Icon_Stepper,
+5,1,G102,SD Icon,Custom-Misc:Graphic_Placeholder,Custom-Graphics:Icon_SD,
+6,1,G103,Hot Icon,Custom-Misc:Graphic_Placeholder,Custom-Graphics:Icon_Temp,
+7,1,H1,MountingHole,Mechanical:MountingHole,Custom-Mechanical:RGB_Encoder_Hole,~
+8,5,"H2, H3, H4, H5, H6",MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_5.3mm_M5_Pad,~
+9,9,"H7, H8, H9, H10, H11, H12, H13, H14, H15",MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3_Pad,~
+10,1,J1,Conn_02x05_Odd_Even,Connector_Generic:Conn_02x05_Odd_Even,Custom-Electromechanical:PinHeader_2x05_P2.54mm_Shrouded,~
+11,1,J2,Conn_02x04_Odd_Even,Connector_Generic:Conn_02x04_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical_SMD,~
+12,1,J3,Conn_01x18,Connector_Generic:Conn_01x18,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical_SMD_Pin1Left,~
+13,2,"R1, R3",4K7,Device:R,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+14,1,R2,10K,Device:R,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+15,3,"R4, R5, R6",0R,Device:R,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+16,6,"R7, R8, R9, R10, R11, R12",390R,Device:R,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+17,2,"R101, R102",1K,Device:R,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+18,1,RV1,R_POT,Device:R_POT,Custom-Electromechanical:Potentiometer_Vishay_TS53YJ,~
+19,1,U2,P82B715,Custom-InterfaceIC:P82B715,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://www.ti.com/lit/ds/symlink/p82b715.pdf
+20,1,U3,MCP23017_SS,Interface_Expansion:MCP23017_SS,Package_SO:SSOP-28_5.3x10.2mm_P0.65mm,http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf

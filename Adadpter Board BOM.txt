@@ -1,0 +1,18 @@
+IDC-6  Connector: III
+IDC-16 Connector: II
+IDC-20 Connector: I
+IDC-26 Connector: I
+
+JST-4: IIIII
+JST-2: IIIIIII
+Screw Terminal (0.1"): I 
+
+XT60: I
+XT30: I
+
+SMD LED: III
+SMD LED RES: III
+
+RGB ENCODER: I
+
+USB-A Connector: I

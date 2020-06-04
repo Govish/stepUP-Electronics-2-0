@@ -1,0 +1,81 @@
+
+ ======== LCD Connector =======
+			 =========
+	No Connect	-| 1   2 |- 	Ground
+	Encoder B	-| 3   4 |-	LED Red
+	Encoder A	-| 5   6 |-	LED Green
+	Buffer SCL	-| 7   8 |-	LED Blue
+	Buffer SDA	-| 9  10 |-	5V
+			 =========
+
+ ======== Encoder Daughterboard =======
+			 =========
+	VCC		-| 1   2 |- 	Ground
+	Encoder B	-| 3   4 |-	LED Blue
+	Encoder A	-| 5   6 |-	LED Green
+	Encoder Switch	-| 7   8 |-	LED Red
+			 =========
+
+ ======== Y-Axis Motor/Runout Sensor Breakout ========
+			 =========
+	Motor 1B	-| 1   2 |-	Motor 1A
+	Runout A	-| 3   4 |-	Runout B
+	Motor 2B	-| 5   6 |-	Motor 2A
+			 =========
+
+ ======== Z-Axis Motor/Endstop Breakout ========
+			 =========
+	Motor 1B	-| 1   2 |-	Motor 1A
+	Endstop A	-| 3   4 |-	Endstop B
+	Motor 2B	-| 5   6 |-	Motor 2A
+			 =========
+
+ ======== LED Endstop Breakout ========
+			 =========
+	Blue		-| 1   2 |-	Green
+	12V		-| 3   4 |-	Red
+	Endstop A	-| 5   6 |-	Endstop B
+			 =========
+
+ ======== Heatbed Breakout ========
+			 =========
+	Thermistor A	-| 1   2 |-	Thermistor B
+	Heater (-)	-| 3   4 |-	Heater (+)
+	Heater (-)	-| 5   4 |-	Heater (+)
+	Heater (-)	-| 7   4 |-	Heater (+)
+	Heater (-)	-| 9   4 |-	Heater (+)
+	Heater (-)	-| 11 12 |-	Heater (+)
+	Heater (-)	-| 13 14 |-	Heater (+)
+	Heater (-)	-| 15 16 |-	Heater (+)
+	Heater (-)	-| 17 18 |-	Heater (+)
+	Heater (-)	-| 19 20 |-	Heater (+)
+	Heater (-)	-| 21 22 |-	Heater (+)
+	Heater (-)	-| 23 24 |-	Heater (+)
+	Heater (-)	-| 25 26 |-	Heater (+)
+			 =========
+
+ ======== Gantry Breakout (to controller) ========
+			 =========
+	Ext 2A		-| 1   2 |-	Ext 1A
+	Ext 2B		-| 3   4 |-	Ext 1B
+	+12V		-| 5   4 |-	Print Fan (-)
+	+12V		-| 7   4 |-	Hotend Fan (-)
+	+12V		-| 9   4 |-	Thermistor A
+	Heater (-)	-| 11 12 |-	Thermistor B
+	Heater (-)	-| 13 14 |-	Endstop A
+	Heater (-)	-| 15 16 |-	Endstop B
+	X 1B		-| 17 18 |-	X 2B
+	X 1A		-| 19 20 |-	X 2A
+			 =========
+
+ ======== Gantry Breakout (to extruder) ========
+			 =========
+	Ext 2A		-| 1   2 |-	Ext 1A
+	Ext 2B		-| 3   4 |-	Ext 1B
+	Heater (-)	-| 5   4 |-	Print Fan (-)
+	Heater (-)	-| 7   4 |-	Hotend Fan (-)
+	Heater (-)	-| 9   4 |-	Thermistor A
+	+12V		-| 11 12 |-	Thermistor B
+	+12V		-| 13 14 |-	Endstop A
+	+12V		-| 15 16 |-	Endstop B
+			 =========
