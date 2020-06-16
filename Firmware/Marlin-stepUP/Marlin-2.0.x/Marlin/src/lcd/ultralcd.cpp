@@ -981,7 +981,7 @@ void MarlinUI::update() {
           + 3
         #endif
       ;
-      max_display_update_time--;
+      if(max_display_update_time) max_display_update_time--; //preventing rollovers 
       refresh(LCDVIEW_REDRAW_NOW);
     }
 
