@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:quickstep_controller RevII-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:R R401
+L Device:R R?
 U 1 1 5E4A125F
 P 3000 1250
 F 0 "R?" H 3070 1296 50  0000 L CNN
@@ -25,7 +26,7 @@ F 3 "~" H 3000 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R405
+L Device:R R?
 U 1 1 5E4A1AF0
 P 3300 1550
 F 0 "R?" V 3400 1550 50  0000 C CNN
@@ -36,7 +37,7 @@ F 3 "~" H 3300 1550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C401
+L Device:C C?
 U 1 1 5E4A2A00
 P 3950 1800
 F 0 "C?" H 4065 1846 50  0000 L CNN
@@ -81,7 +82,7 @@ Wire Wire Line
 	3000 1900 2800 1900
 Connection ~ 3000 2050
 $Comp
-L power:GND #PWR0402
+L power:GND #PWR?
 U 1 1 5E4A38DB
 P 3000 2150
 F 0 "#PWR?" H 3000 1900 50  0001 C CNN
@@ -94,7 +95,7 @@ $EndComp
 Wire Wire Line
 	3000 1000 3000 1100
 $Comp
-L power:+3.3V #PWR0401
+L power:+3.3V #PWR?
 U 1 1 5E4A404E
 P 3000 1000
 F 0 "#PWR?" H 3000 850 50  0001 C CNN
@@ -116,7 +117,7 @@ Wire Wire Line
 Text HLabel 4800 1550 2    50   Output ~ 0
 X_STOP_OUT
 $Comp
-L Device:R R402
+L Device:R R?
 U 1 1 5E4AA0CA
 P 3000 2950
 F 0 "R?" H 3070 2996 50  0000 L CNN
@@ -127,7 +128,7 @@ F 3 "~" H 3000 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R406
+L Device:R R?
 U 1 1 5E4AA0D0
 P 3300 3250
 F 0 "R?" V 3400 3250 50  0000 C CNN
@@ -138,7 +139,7 @@ F 3 "~" H 3300 3250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C402
+L Device:C C?
 U 1 1 5E4AA0DC
 P 3950 3500
 F 0 "C?" H 4065 3546 50  0000 L CNN
@@ -183,7 +184,7 @@ Wire Wire Line
 	3000 3600 2800 3600
 Connection ~ 3000 3750
 $Comp
-L power:GND #PWR0404
+L power:GND #PWR?
 U 1 1 5E4AA0F5
 P 3000 3850
 F 0 "#PWR?" H 3000 3600 50  0001 C CNN
@@ -196,7 +197,7 @@ $EndComp
 Wire Wire Line
 	3000 2700 3000 2800
 $Comp
-L power:+3.3V #PWR0403
+L power:+3.3V #PWR?
 U 1 1 5E4AA0FC
 P 3000 2700
 F 0 "#PWR?" H 3000 2550 50  0001 C CNN
@@ -218,7 +219,7 @@ Wire Wire Line
 Text HLabel 4800 3250 2    50   Output ~ 0
 Y_STOP_OUT
 $Comp
-L Device:R R403
+L Device:R R?
 U 1 1 5E4ACB4D
 P 3000 4650
 F 0 "R?" H 3070 4696 50  0000 L CNN
@@ -229,7 +230,7 @@ F 3 "~" H 3000 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R407
+L Device:R R?
 U 1 1 5E4ACB53
 P 3300 4950
 F 0 "R?" V 3400 4950 50  0000 C CNN
@@ -240,7 +241,7 @@ F 3 "~" H 3300 4950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C403
+L Device:C C?
 U 1 1 5E4ACB5F
 P 3950 5200
 F 0 "C?" H 4065 5246 50  0000 L CNN
@@ -285,7 +286,7 @@ Wire Wire Line
 	3000 5300 2800 5300
 Connection ~ 3000 5450
 $Comp
-L power:GND #PWR0406
+L power:GND #PWR?
 U 1 1 5E4ACB78
 P 3000 5550
 F 0 "#PWR?" H 3000 5300 50  0001 C CNN
@@ -298,7 +299,7 @@ $EndComp
 Wire Wire Line
 	3000 4400 3000 4500
 $Comp
-L power:+3.3V #PWR0405
+L power:+3.3V #PWR?
 U 1 1 5E4ACB7F
 P 3000 4400
 F 0 "#PWR?" H 3000 4250 50  0001 C CNN
@@ -320,7 +321,7 @@ Wire Wire Line
 Text HLabel 4800 4950 2    50   Output ~ 0
 Z_STOP_OUT
 $Comp
-L Device:R R404
+L Device:R R?
 U 1 1 5E4BA014
 P 3000 6350
 F 0 "R?" H 3070 6396 50  0000 L CNN
@@ -331,7 +332,7 @@ F 3 "~" H 3000 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R408
+L Device:R R?
 U 1 1 5E4BA01A
 P 3300 6650
 F 0 "R?" V 3400 6650 50  0000 C CNN
@@ -342,7 +343,7 @@ F 3 "~" H 3300 6650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C404
+L Device:C C?
 U 1 1 5E4BA026
 P 3950 6900
 F 0 "C?" H 4065 6946 50  0000 L CNN
@@ -387,7 +388,7 @@ Wire Wire Line
 	3000 7000 2800 7000
 Connection ~ 3000 7150
 $Comp
-L power:GND #PWR0408
+L power:GND #PWR?
 U 1 1 5E4BA03F
 P 3000 7250
 F 0 "#PWR?" H 3000 7000 50  0001 C CNN
@@ -400,7 +401,7 @@ $EndComp
 Wire Wire Line
 	3000 6100 3000 6200
 $Comp
-L power:+3.3V #PWR0407
+L power:+3.3V #PWR?
 U 1 1 5E4BA046
 P 3000 6100
 F 0 "#PWR?" H 3000 5950 50  0001 C CNN
@@ -422,7 +423,7 @@ Wire Wire Line
 Text HLabel 4800 6650 2    50   Output ~ 0
 FIL_SEN_OUT
 $Comp
-L 74xx:74HC14 U401
+L 74xx:74HC14 U?
 U 7 1 5E4C5ACA
 P 6850 5450
 F 0 "U?" H 7400 5250 50  0000 R CNN
@@ -433,7 +434,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 6850 5450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0411
+L power:GND #PWR?
 U 1 1 5E4F8434
 P 6850 6050
 F 0 "#PWR?" H 6850 5800 50  0001 C CNN
@@ -450,7 +451,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 4850 6500 4850
 $Comp
-L Device:C C405
+L Device:C C?
 U 1 1 5E4FDA94
 P 6500 5100
 F 0 "C?" H 6385 5054 50  0000 R CNN
@@ -463,7 +464,7 @@ $EndComp
 Wire Wire Line
 	6500 4850 6500 4950
 $Comp
-L power:GND #PWR0409
+L power:GND #PWR?
 U 1 1 5E50010F
 P 6500 5350
 F 0 "#PWR?" H 6500 5100 50  0001 C CNN
@@ -479,7 +480,7 @@ Wire Wire Line
 	6850 4750 6850 4850
 Connection ~ 6850 4850
 $Comp
-L power:+3.3V #PWR0410
+L power:+3.3V #PWR?
 U 1 1 5E507496
 P 6850 4750
 F 0 "#PWR?" H 6850 4600 50  0001 C CNN
@@ -490,7 +491,7 @@ F 3 "" H 6850 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0414
+L power:+3.3V #PWR?
 U 1 1 5E5086C7
 P 8200 1200
 F 0 "#PWR?" H 8200 1050 50  0001 C CNN
@@ -501,7 +502,7 @@ F 3 "" H 8200 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Custom-DiscreteSymbols:NTR3C21NZT1G Q401
+L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
 U 1 1 5E518A45
 P 7300 1650
 F 0 "Q?" H 7450 1750 50  0000 L CNN
@@ -520,7 +521,7 @@ Wire Wire Line
 Text HLabel 6550 1300 0    50   Input ~ 0
 RST
 $Comp
-L power:+3.3V #PWR0415
+L power:+3.3V #PWR?
 U 1 1 5E54B6AD
 P 8200 2550
 F 0 "#PWR?" H 8200 2400 50  0001 C CNN
@@ -531,7 +532,7 @@ F 3 "" H 8200 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C408
+L Device:C C?
 U 1 1 5E54B6C5
 P 8200 1900
 F 0 "C?" H 8500 1850 50  0000 R CNN
@@ -542,7 +543,7 @@ F 3 "~" H 8200 1900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Custom-DiscreteSymbols:NTR3C21NZT1G Q402
+L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
 U 1 1 5E54B6D1
 P 7300 3000
 F 0 "Q?" H 7450 3100 50  0000 L CNN
@@ -573,7 +574,7 @@ Wire Notes Line
 Text Notes 3950 7550 0    100  ~ 0
 Microswitch Inputs
 $Comp
-L Device:C C406
+L Device:C C?
 U 1 1 5E56A58D
 P 6850 1650
 F 0 "C?" H 7150 1600 50  0000 R CNN
@@ -601,7 +602,7 @@ Wire Notes Line
 Text Notes 7850 4050 0    100  ~ 0
 E-stop Input (NO Switch)
 $Comp
-L Device:LED D409
+L Device:LED D?
 U 1 1 5ED61630
 P 7500 1300
 F 0 "D?" H 7600 1150 50  0000 R CNN
@@ -612,7 +613,7 @@ F 3 "~" H 7500 1300 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:LED D410
+L Device:LED D?
 U 1 1 5ED6268E
 P 7500 2650
 F 0 "D?" H 7500 2550 50  0000 C CNN
@@ -623,7 +624,7 @@ F 3 "~" H 7500 2650 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:LED D406
+L Device:LED D?
 U 1 1 5ED62F96
 P 4700 3450
 F 0 "D?" V 4739 3332 50  0000 R CNN
@@ -634,7 +635,7 @@ F 3 "~" H 4700 3450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D407
+L Device:LED D?
 U 1 1 5ED64406
 P 4700 5150
 F 0 "D?" V 4739 5032 50  0000 R CNN
@@ -645,7 +646,7 @@ F 3 "~" H 4700 5150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D408
+L Device:LED D?
 U 1 1 5ED649C2
 P 4700 6850
 F 0 "D?" V 4739 6732 50  0000 R CNN
@@ -656,7 +657,7 @@ F 3 "~" H 4700 6850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D405
+L Device:LED D?
 U 1 1 5ED6502D
 P 4700 1750
 F 0 "D?" V 4739 1632 50  0000 R CNN
@@ -667,7 +668,7 @@ F 3 "~" H 4700 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R409
+L Device:R R?
 U 1 1 5ED65C85
 P 4450 2050
 F 0 "R?" V 4350 2050 50  0000 C CNN
@@ -678,7 +679,7 @@ F 3 "~" H 4450 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R410
+L Device:R R?
 U 1 1 5ED66AEE
 P 4450 3750
 F 0 "R?" V 4350 3750 50  0000 C CNN
@@ -689,7 +690,7 @@ F 3 "~" H 4450 3750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R411
+L Device:R R?
 U 1 1 5ED67203
 P 4450 5450
 F 0 "R?" V 4350 5450 50  0000 C CNN
@@ -700,7 +701,7 @@ F 3 "~" H 4450 5450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R412
+L Device:R R?
 U 1 1 5ED67724
 P 4450 7150
 F 0 "R?" V 4350 7150 50  0000 C CNN
@@ -711,7 +712,7 @@ F 3 "~" H 4450 7150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R413
+L Device:R R?
 U 1 1 5ED67C90
 P 7950 1300
 F 0 "R?" V 7850 1300 50  0000 C CNN
@@ -722,7 +723,7 @@ F 3 "~" H 7950 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R417
+L Device:R R?
 U 1 1 5ED711EA
 P 7950 2650
 F 0 "R?" V 7850 2650 50  0000 C CNN
@@ -788,7 +789,7 @@ Wire Wire Line
 	4300 2050 3950 2050
 Connection ~ 3950 2050
 $Comp
-L power:PWR_FLAG #FLG0401
+L power:PWR_FLAG #FLG?
 U 1 1 5EB24DA1
 P 6850 4850
 F 0 "#FLG?" H 6850 4925 50  0001 C CNN
@@ -855,7 +856,7 @@ F 4 "MM3Z3V6T1G" V 3550 1800 50  0001 C CNN "Part No."
 	0    1    1    0   
 $EndComp
 $Comp
-L 74xx:74HC14 U401
+L 74xx:74HC14 U?
 U 1 1 5F07FDD2
 P 4350 3250
 F 0 "U?" H 4350 3567 50  0000 C CNN
@@ -866,7 +867,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4350 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC14 U401
+L 74xx:74HC14 U?
 U 4 1 5F081C1E
 P 4350 6650
 F 0 "U?" H 4350 6967 50  0000 C CNN
@@ -877,7 +878,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4350 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC14 U401
+L 74xx:74HC14 U?
 U 5 1 5F083494
 P 4350 1550
 F 0 "U?" H 4350 1867 50  0000 C CNN
@@ -888,7 +889,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4350 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC14 U401
+L 74xx:74HC14 U?
 U 6 1 5F084F37
 P 4350 4950
 F 0 "U?" H 4350 5267 50  0000 C CNN

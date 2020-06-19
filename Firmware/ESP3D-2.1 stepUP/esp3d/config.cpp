@@ -160,8 +160,8 @@ bool  CONFIG::is_locked(byte flag)
 
 void CONFIG::InitDirectSD()
 {
+    //have to keep this the same because ESP3D errors out otherwise
     CONFIG::is_direct_sd = false;
-
 }
 
 bool CONFIG::DisableSerial()
@@ -181,6 +181,10 @@ return true;
 
 bool CONFIG::InitBaudrate(long value)
 {
+#if defined(DEBUG_ESP3D) && defined(DEBUG_OUTPUT_SERIAL)
+    Serial.begin(115200);
+#endif
+
     long baud_rate = 0;
     if (value > 0) {
         baud_rate = value;
@@ -297,6 +301,13 @@ void  CONFIG::InitPins()
 #ifdef DHT_FEATURE
     CONFIG::InitDHT();
 #endif
+
+    //for quickstep SD interface
+    pinMode(SD_PWR_PIN, OUTPUT);
+    pinMode(SD_SWITCH_PIN, OUTPUT);
+    pinMode(SD_CS_SENSE_PIN, INPUT);
+    pinMode(SD_CD_PIN, INPUT_PULLUP);
+
 }
 
 #if defined(TIMESTAMP_FEATURE)

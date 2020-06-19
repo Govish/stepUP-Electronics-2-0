@@ -24,6 +24,10 @@
 #define NODEBUG_WEBSOCKETS
 #include <WebSocketsServer.h>
 
+//for native SD interface
+#include "FS.h"
+#include "SD_MMC.h"
+
 extern void handle_web_interface_root();
 extern void handle_login();
 extern void handleFileList();
@@ -33,6 +37,7 @@ extern void handle_web_command();
 extern void handle_web_command_silent();
 extern void handle_serial_SDFileList();
 extern void SDFile_serial_upload();
+extern void SDFile_native_upload();
 extern WebSocketsServer * socket_server;
 extern void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length);
 

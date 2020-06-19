@@ -74,6 +74,13 @@ WebSocketsServer * socket_server;
 #define ESP_ERROR_BUFFER_OVERFLOW 11
 #define ESP_ERROR_START_UPLOAD 12
 
+//SD card utility functions
+#define POWER_DOWN_CARD() digitalWrite(SD_PWR_PIN, HIGH)
+#define POWER_UP_CARD() digitalWrite(SD_PWR_PIN, LOW)
+#define CYCLE_CARD() do {POWER_DOWN_CARD(); CONFIG::wait(100); POWER_UP_CARD(); CONFIG::wait(100);} while(0)
+#define CLAIM_CARD() digitalWrite(SD_SWITCH_PIN, HIGH)
+#define RELEASE_CARD() do{ digitalWrite(SD_SWITCH_PIN, LOW); CYCLE_CARD();} while(0)
+
 void pushError(int code, const char * st, bool web_error = 500, uint16_t timeout = 1000){
     if (socket_server && st) {
         String s = "ERROR:" + String(code) + ":";
@@ -1410,6 +1417,164 @@ void SDFile_serial_upload()
         CloseSerialUpload (true, current_filename, lineNb);
         cancelUpload();
     }
+}
+
+//upload SD card through SDMMC Interface
+/*
+ * CUSTOM FEATURE FOR QUICKSTEP
+ */
+void SDFile_native_upload()
+{
+    static String current_filename;
+    static File file = (File)0;
+
+    //Guest cannot upload - only admin and user
+    if(web_interface->is_authenticated() == LEVEL_GUEST) {
+        web_interface->_upload_status=UPLOAD_STATUS_FAILED;
+        ESPCOM::println (F ("SD upload rejected"), PRINTER_PIPE);
+        pushError(ESP_ERROR_AUTHENTICATION, "Upload rejected", 401);
+        LOG("SD upload rejected\r\n");
+    } else {
+        //retrieve current file id
+        HTTPUpload& upload = (web_interface->web_server).upload();
+        if((web_interface->_upload_status != UPLOAD_STATUS_FAILED) || (upload.status == UPLOAD_FILE_START)) {
+            
+            //UPLOAD START
+            
+            if(upload.status == UPLOAD_FILE_START) {
+                web_interface->_upload_status= UPLOAD_STATUS_ONGOING;
+                LOG("Upload Start\r\n")
+
+//======================= RIGHT HERE BOSS (CHANGE WHEN NEW HARDWARE) =========================
+
+                //check if Marlin is using the SD card
+                if(false) { //!digitalRead(SD_CS_SENSE_PIN)) {
+                    LOG("Start Upload Failed\r\n")
+                    web_interface->_upload_status= UPLOAD_STATUS_FAILED;
+                    pushError(ESP_ERROR_START_UPLOAD, "Card Busy");
+                } else {
+                    CLAIM_CARD(); //switch the card over to ESP control
+                    LOG("Claiming Card\r\n");
+                    CONFIG::wait(25);
+                    //Try to Mount SD card
+                    //check if card detect line is valid
+                    if(digitalRead(SD_CD_PIN)) { //card isn't present
+                        LOG("Card not present\r\n")
+                        web_interface->_upload_status= UPLOAD_STATUS_FAILED;
+                        pushError(ESP_ERROR_MOUNT_SD, "No SD Card");
+                    } else LOG("Card Present\r\n");
+
+                    //if card is present
+                    if (web_interface->_upload_status != UPLOAD_STATUS_FAILED) {
+                        //power cycle the card to reset it
+                        CYCLE_CARD();
+
+                        //try to mount the cad using MMC, check if there's a card there
+                        if(!SD_MMC.begin() || SD_MMC.cardType() == CARD_NONE) {
+                            LOG("Mounting SD Failed");
+                            web_interface->_upload_status= UPLOAD_STATUS_FAILED;
+                            pushError(ESP_ERROR_MOUNT_SD, "Mounting SD failed");
+                        } else LOG("Card Mounted\r\n");
+                    }
+
+                    if (web_interface->_upload_status != UPLOAD_STATUS_FAILED) {
+                        current_filename = upload.filename;
+                        String sizeargname  = current_filename + "S";
+
+                        //check if the filename exists, and delete it if so
+                        //then create and open this file
+                        if(SD_MMC.exists(current_filename)) {
+                            if(!SD_MMC.remove(current_filename)) {
+                                web_interface->_upload_status= UPLOAD_STATUS_FAILED;
+                                LOG("File Overwrite Failed\r\n");
+                                pushError(ESP_ERROR_FILE_CREATION, "File Overwrite Failed");
+                            }
+                            LOG("Overwriting File\r\n");
+                        }
+
+                        //close the file if it's already open
+                        if(web_interface->_upload_status != UPLOAD_STATUS_FAILED && file) file.close();
+
+                        //check if we have enough free space on the card (and if we haven't failed the file upload yet
+                        if ((web_interface->web_server).hasArg (sizeargname.c_str()) && web_interface->_upload_status != UPLOAD_STATUS_FAILED) {
+                            uint64_t freespace;
+                            freespace = SD_MMC.totalBytes() - SD_MMC.usedBytes(); //bytes
+                            uint32_t filesize = (web_interface->web_server).arg (sizeargname.c_str()).toInt();
+                            if (filesize > freespace) {
+                                web_interface->_upload_status=UPLOAD_STATUS_FAILED;
+                                pushError(ESP_ERROR_NOT_ENOUGH_SPACE, "Upload rejected, not enough space");
+                            }
+                            LOG("Enough Free Space\r\n");
+                        } else LOG("Can't check free space (or card init failed)\r\n");
+
+
+                        //try to create the file
+                        if (web_interface->_upload_status != UPLOAD_STATUS_FAILED) {
+                            file = SD_MMC.open(current_filename, FILE_WRITE);
+                            
+                            if(file) web_interface->_upload_status= UPLOAD_STATUS_ONGOING;
+                            else {
+                                web_interface->_upload_status= UPLOAD_STATUS_FAILED;
+                                LOG("Creation failed\r\n");
+                                pushError(ESP_ERROR_FILE_CREATION, "File creation failed");
+                            }
+                        }
+                    }
+                }
+
+            //WRITE THE UPLOAD
+
+            } else if(upload.status == UPLOAD_FILE_WRITE) {
+                if(file && web_interface->_upload_status == UPLOAD_STATUS_ONGOING) {
+                    LOG("Starting SD Write\r\n");
+                    if (upload.currentSize != file.write(upload.buf, upload.currentSize)){
+                        web_interface->_upload_status=UPLOAD_STATUS_FAILED;
+                        pushError(ESP_ERROR_FILE_WRITE, "File write failed");
+                    }
+                } else {
+                    //we have a problem set flag UPLOAD_STATUS_FAILED
+                    web_interface->_upload_status=UPLOAD_STATUS_FAILED;
+                    pushError(ESP_ERROR_FILE_WRITE, "File write failed");
+                }
+
+            //FINISHING THE UPLOAD
+
+            } else if(upload.status == UPLOAD_FILE_END) {
+                //check if file is still open
+                if(file) {
+                    //close it
+                    file.close();
+                    if (web_interface->_upload_status == UPLOAD_STATUS_ONGOING) {
+                        LOG("SD Upload Successful\r\n");
+                        web_interface->_upload_status = UPLOAD_STATUS_SUCCESSFUL;
+                        SD_MMC.end(); //deinit the card and mmc module
+                        RELEASE_CARD();
+                    }
+                } else {
+                    //we have a problem set flag UPLOAD_STATUS_FAILED
+                    web_interface->_upload_status=UPLOAD_STATUS_FAILED;
+                    LOG("Error ESP close\r\n")
+                    pushError(ESP_ERROR_FILE_CLOSE, "File close failed");
+                }
+            } else {
+                    LOG("UNKNOWN STATE\r\n");
+                    web_interface->_upload_status = UPLOAD_STATUS_FAILED;
+                    return;
+            }
+        }
+    }
+    if (web_interface->_upload_status == UPLOAD_STATUS_FAILED) {
+        LOG("Handling Upload Fail\r\n");
+        cancelUpload();
+        LOG("Upload Cancelled\r\n");
+        if (SD_MMC.exists (current_filename) ) {
+            LOG("Trying to remove file\r\n");
+            SD_MMC.remove (current_filename);
+        }
+        SD_MMC.end(); //deinit the card and mmc module
+        RELEASE_CARD();
+    }
+    CONFIG::wait(0);
 }
 
 #endif

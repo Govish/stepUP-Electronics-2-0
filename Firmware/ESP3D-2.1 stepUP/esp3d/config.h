@@ -91,6 +91,9 @@
 //TIMESTAMP_FEATURE: Time stamp feature on direct SD  files
 //#define TIMESTAMP_FEATURE
 
+//Native SD UPLOAD: enable to use MMC interface to upload files
+//#define NATIVE_SD_UPLOAD
+
 //Extra features /////////////////////////////////////////////////////////////////////////
 
 //Workaround for Marlin 2.X coldstart
@@ -133,6 +136,11 @@
 #define OLED_FLIP_VERTICALY 1 //0 to disable
 #endif
 
+// FOR QUICKSTEP SD INTERFACE
+#define SD_PWR_PIN 19
+#define SD_SWITCH_PIN 18
+#define SD_CS_SENSE_PIN 21
+#define SD_CD_PIN 5
 
 //Supported FW /////////////////////////////////////////////////////////////
 #define UNKNOWN_FW 0

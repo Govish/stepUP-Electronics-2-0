@@ -368,7 +368,12 @@ WEBINTERFACE_CLASS::WEBINTERFACE_CLASS (int port) : web_server (port)
     web_server.on ("/command", HTTP_ANY, handle_web_command);
     web_server.on ("/command_silent", HTTP_ANY, handle_web_command_silent);
     //Serial SD management
+    
+#ifdef NATIVE_SD_UPLOAD
+    web_server.on ("/upload_serial", HTTP_ANY, handle_serial_SDFileList, SDFile_native_upload);
+#else
     web_server.on ("/upload_serial", HTTP_ANY, handle_serial_SDFileList, SDFile_serial_upload);
+#endif
 
     blockserial = false;
     restartmodule = false;

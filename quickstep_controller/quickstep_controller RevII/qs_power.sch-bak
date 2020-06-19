@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:quickstep_controller RevII-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 15
+Sheet 7 15
 Title ""
 Date ""
 Rev ""
@@ -380,18 +381,18 @@ Connection ~ 8550 1700
 $Comp
 L Device:R R812
 U 1 1 5E407CD4
-P 6250 2250
-F 0 "R812" H 6320 2296 50  0000 L CNN
-F 1 "16.9K" H 6320 2205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6180 2250 50  0001 C CNN
-F 3 "~" H 6250 2250 50  0001 C CNN
-	1    6250 2250
+P 6250 2700
+F 0 "R812" H 6320 2746 50  0000 L CNN
+F 1 "16.9K" H 6320 2655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6180 2700 50  0001 C CNN
+F 3 "~" H 6250 2700 50  0001 C CNN
+	1    6250 2700
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	6150 2000 6250 2000
 Wire Wire Line
-	6250 2000 6250 2100
+	6250 2000 6250 2550
 $Comp
 L power:GND #PWR0815
 U 1 1 5E40951E
@@ -504,52 +505,11 @@ Wire Wire Line
 	6750 5250 6600 5250
 Text Label 7250 4550 2    50   ~ 0
 EN_CONV
-$Comp
-L Custom-DiscreteSymbols:NTR3C21NZT1G Q?
-U 1 1 5E488876
-P 6150 2700
-AR Path="/5E37B32D/5E488876" Ref="Q?"  Part="1" 
-AR Path="/5E37B1D2/5E488876" Ref="Q801"  Part="1" 
-F 0 "Q801" H 6356 2746 50  0000 L CNN
-F 1 "NTR3C21NZT1G" H 5600 2550 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 6350 2800 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/75129/sqj479ep.pdf" H 6150 2700 50  0001 C CNN
-	1    6150 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 2400 6250 2450
-Wire Wire Line
-	6250 2900 6250 2950
-$Comp
-L Device:R R811
-U 1 1 5E493893
-P 5750 2450
-F 0 "R811" V 5850 2400 50  0000 L CNN
-F 1 "10K" V 5650 2450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5680 2450 50  0001 C CNN
-F 3 "~" H 5750 2450 50  0001 C CNN
-	1    5750 2450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5900 2450 6250 2450
-Connection ~ 6250 2450
-Wire Wire Line
-	6250 2450 6250 2500
 Wire Wire Line
 	4800 1800 5350 1800
-Wire Wire Line
-	5150 1700 5150 2450
-Wire Wire Line
-	5150 2450 5600 2450
 Connection ~ 5150 1700
 Wire Wire Line
 	5150 1700 5250 1700
-Wire Wire Line
-	5450 2700 5950 2700
-Text Label 5450 2700 0    50   ~ 0
-EN_CONV
 $Comp
 L power:VBUS #PWR0809
 U 1 1 5E47AD46
@@ -883,4 +843,6 @@ Wire Wire Line
 	4800 5900 4800 5950
 Wire Wire Line
 	3950 5900 3950 5950
+Wire Wire Line
+	6250 2850 6250 2950
 $EndSCHEMATC
