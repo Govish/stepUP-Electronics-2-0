@@ -342,7 +342,7 @@ bool unload_filament(const float &unload_length, const bool show_lcd/*=false*/,
   safe_delay(FILAMENT_UNLOAD_PURGE_DELAY);
 
   // Quickly purge
-  do_pause_e_move((FILAMENT_UNLOAD_PURGE_RETRACT + FILAMENT_UNLOAD_PURGE_LENGTH) * mix_multiplier,
+  do_pause_e_move(-(FILAMENT_UNLOAD_PURGE_RETRACT + FILAMENT_UNLOAD_PURGE_LENGTH) * mix_multiplier,
                   (FILAMENT_UNLOAD_PURGE_FEEDRATE) * mix_multiplier);
 
   // Unload filament
@@ -406,10 +406,17 @@ bool cold_pull_filament(const bool show_lcd/*=false*/,
 
   // drop the temp, set the cooling fan to mask, and remember the previous fan speeds
   thermalManager.set_fans_paused(true);
-  thermalManager.set_fan_speed(active_extruder, 255);
   thermalManager.setTargetHotend(COLD_PULL_TEMPERATURE, active_extruder);
+  thermalManager.set_fan_speed(active_extruder, 255);
+
+  //hold the fan on until we get close to the cold pull temperature
+  while(thermalManager.degHotend(active_extruder) > (COLD_PULL_TEMPERATURE + COLD_PULL_RAPID_COOL)) {
+    idle();
+    gcode.reset_stepper_timeout();
+  }
+  thermalManager.set_fan_speed(active_extruder, 0);
   thermalManager.wait_for_hotend(active_extruder, false); //wait for cooling
-  thermalManager.set_fans_paused(false); //restore fan speed after fully cooled
+
 
   //temporarily disable cold extrusion protection to allow cold retraction
   bool save_cold_extrude = thermalManager.allow_cold_extrude;
@@ -457,6 +464,7 @@ bool cold_pull_filament(const bool show_lcd/*=false*/,
 
   //restore cold extrusion status
   thermalManager.allow_cold_extrude = save_cold_extrude;
+  thermalManager.set_fans_paused(false); //restore fan speed
 
   return true;
 }

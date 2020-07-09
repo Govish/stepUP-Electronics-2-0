@@ -483,10 +483,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Ultimaker
-  #define DEFAULT_Kp 29.10
-  #define DEFAULT_Ki 3.25
-  #define DEFAULT_Kd 65.19
+  // Volcano for stepUP
+//  #define DEFAULT_Kp 29.10
+//  #define DEFAULT_Ki 3.25
+//  #define DEFAULT_Kd 65.19
+
+  //standard V6 for stepUP
+  #define DEFAULT_Kp 4.44
+  #define DEFAULT_Ki 0.45
+  #define DEFAULT_Kd 10.93
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -1104,7 +1109,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 216.5
 #define Y_MAX_POS 215
-#define Z_MAX_POS 210
+#define Z_MAX_POS 212.5
 
 /**
  * Software Endstops

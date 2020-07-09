@@ -245,7 +245,7 @@
       // Just figure out Kf at fullspeed (255) and PID_FAN_SCALING_MIN_SPEED.
       // DEFAULT_Kf and PID_FAN_SCALING_LIN_FACTOR are calculated accordingly.
 
-      #define PID_FAN_SCALING_AT_FULL_SPEED 35.0        //=PID_FAN_SCALING_LIN_FACTOR*255+DEFAULT_Kf
+      #define PID_FAN_SCALING_AT_FULL_SPEED 25.0        //=PID_FAN_SCALING_LIN_FACTOR*255+DEFAULT_Kf
       #define PID_FAN_SCALING_AT_MIN_SPEED 3.0          //=PID_FAN_SCALING_LIN_FACTOR*PID_FAN_SCALING_MIN_SPEED+DEFAULT_Kf
       #define PID_FAN_SCALING_MIN_SPEED 10.0            // Minimum fan speed at which to enable PID_FAN_SCALING
 
@@ -1918,6 +1918,7 @@
   #define COLD_PULL_EXTRUDE_LENGTH           40
   #define COLD_PULL_EXTRUDE_FEEDRATE          6   //(mm/s) want it to be fast
   #define COLD_PULL_TEMPERATURE             100
+  #define COLD_PULL_RAPID_COOL               20   // keep the fan on until this temp above the cold pull temperature
   #define COLD_PULL_INITIAL_RETRACT_LENGTH   15   //(mm)
   #define COLD_PULL_INITIAL_RETRACT_FEEDRATE  2   //(mm/s)
   #define COLD_PULL_UNLOAD_LENGTH           100   //(mm)
