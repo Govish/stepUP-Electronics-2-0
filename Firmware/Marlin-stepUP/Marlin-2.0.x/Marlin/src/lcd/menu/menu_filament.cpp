@@ -156,39 +156,41 @@ void _menu_temp_filament_op(const PauseMode mode, const int8_t extruder) {
         #endif
 
         // Unload filament
-        #if E_STEPPERS == 1
-          PGM_P const msg_unload = GET_TEXT(MSG_FILAMENTUNLOAD);
-          if (thermalManager.targetTooColdToExtrude(active_extruder))
-            SUBMENU_P(msg_unload, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, 0); });
-          else
-            GCODES_ITEM_P(msg_unload, PSTR("M702"));
-        #else
-          #if ENABLED(FILAMENT_UNLOAD_ALL_EXTRUDERS)
-          {
-            bool too_cold = false;
-            LOOP_L_N(s, E_STEPPERS) {
-              if (thermalManager.targetTooColdToExtrude(s)) {
-                too_cold = true; break;
-              }
-            }
-            if (!too_cold)
-              GCODES_ITEM(MSG_FILAMENTUNLOAD_ALL, PSTR("M702"));
-            else
-              SUBMENU(MSG_FILAMENTUNLOAD_ALL, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, -1); });
-          }
-          #endif
-          PGM_P const msg_unload = GET_TEXT(MSG_FILAMENTUNLOAD_E);
-          LOOP_L_N(s, E_STEPPERS) {
-            if (thermalManager.targetTooColdToExtrude(s))
-              SUBMENU_N_P(s, msg_unload, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, MenuItemBase::itemIndex); });
-            else {
-              ACTION_ITEM_N_P(s, msg_unload, []{
-                char cmd[12];
-                sprintf_P(cmd, PSTR("M702 T%i"), int(MenuItemBase::itemIndex));
-                lcd_enqueue_one_now(cmd);
-              });
-            }
-          }
+        #if ENABLED(FILAMENT_UNLOAD_LCD) //only have this menu item if specifically enabled
+	        #if E_STEPPERS == 1
+	          PGM_P const msg_unload = GET_TEXT(MSG_FILAMENTUNLOAD);
+	          if (thermalManager.targetTooColdToExtrude(active_extruder))
+	            SUBMENU_P(msg_unload, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, 0); });
+	          else
+	            GCODES_ITEM_P(msg_unload, PSTR("M702"));
+	        #else
+	          #if ENABLED(FILAMENT_UNLOAD_ALL_EXTRUDERS)
+	          {
+	            bool too_cold = false;
+	            LOOP_L_N(s, E_STEPPERS) {
+	              if (thermalManager.targetTooColdToExtrude(s)) {
+	                too_cold = true; break;
+	              }
+	            }
+	            if (!too_cold)
+	              GCODES_ITEM(MSG_FILAMENTUNLOAD_ALL, PSTR("M702"));
+	            else
+	              SUBMENU(MSG_FILAMENTUNLOAD_ALL, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, -1); });
+	          }
+	          #endif
+	          PGM_P const msg_unload = GET_TEXT(MSG_FILAMENTUNLOAD_E);
+	          LOOP_L_N(s, E_STEPPERS) {
+	            if (thermalManager.targetTooColdToExtrude(s))
+	              SUBMENU_N_P(s, msg_unload, []{ _menu_temp_filament_op(PAUSE_MODE_UNLOAD_FILAMENT, MenuItemBase::itemIndex); });
+	            else {
+	              ACTION_ITEM_N_P(s, msg_unload, []{
+	                char cmd[12];
+	                sprintf_P(cmd, PSTR("M702 T%i"), int(MenuItemBase::itemIndex));
+	                lcd_enqueue_one_now(cmd);
+	              });
+	            }
+	          }
+	        #endif
         #endif
 
         // Cold-pull filament
