@@ -136,7 +136,11 @@
   #define RRK(B) (keypad_buttons & (B))
 
   #ifdef EN_C
-    #define BUTTON_CLICK() ((buttons & EN_C) || RRK(EN_KEYPAD_MIDDLE))
+    #ifdef INVERT_BUTTON_CLICKED
+      #define BUTTON_CLICK() ((~buttons & EN_C) || RRK(EN_KEYPAD_MIDDLE))
+    #else
+      #define BUTTON_CLICK() ((buttons & EN_C) || RRK(EN_KEYPAD_MIDDLE))
+    #endif
   #else
     #define BUTTON_CLICK() RRK(EN_KEYPAD_MIDDLE)
   #endif
@@ -190,8 +194,12 @@
       #define B_I2C_BTN_OFFSET 3 // (the first three bit positions reserved for EN_A, EN_B, EN_C)
 
       #define B_MI (PANELOLU2_ENCODER_C << B_I2C_BTN_OFFSET) // requires LiquidTWI2 library v1.2.3 or later
-
-      #define BUTTON_CLICK() (buttons & B_MI)
+      #ifdef INVERT_BUTTON_CLICK
+        #define BUTTON_CLICK() (~buttons & B_MI)
+      #else
+        #define BUTTON_CLICK() (buttons & B_MI)
+      #endif
+      
 
     #endif
 

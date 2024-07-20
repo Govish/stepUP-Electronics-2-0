@@ -2807,9 +2807,9 @@ void Temperature::tick() {
     // 5:                /  4 = 244.1406 Hz
     pwm_count = pwm_count_tmp + _BV(SOFT_PWM_SCALE);
 
-    // increment slow_pwm_count only every 64th pwm_count,
-    // i.e. yielding a PWM frequency of 16/128 Hz (8s).
-    if (((pwm_count >> SOFT_PWM_SCALE) & 0x3F) == 0) {
+    // increment slow_pwm_count only every 16th pwm_count,
+    // i.e. yielding a PWM frequency of 16/32 Hz (2s).
+    if (((pwm_count >> SOFT_PWM_SCALE) & 0x0F) == 0) {
       slow_pwm_count++;
       slow_pwm_count &= 0x7F;
 

@@ -475,7 +475,7 @@
   #define PID_AUTOTUNE_MENU     // Add PID -tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_DEBUG             // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1        // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
-  //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
+  #define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
@@ -484,14 +484,14 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Volcano for stepUP
-//  #define DEFAULT_Kp 29.10
-//  #define DEFAULT_Ki 3.25
-//  #define DEFAULT_Kd 65.19
+  #define DEFAULT_Kp 17.39  
+  #define DEFAULT_Ki 1.04
+  #define DEFAULT_Kd 73.05
 
   //standard V6 for stepUP
-  #define DEFAULT_Kp 4.44
-  #define DEFAULT_Ki 0.45
-  #define DEFAULT_Kd 10.93
+//  #define DEFAULT_Kp 4.44
+//  #define DEFAULT_Ki 0.45
+//  #define DEFAULT_Kd 10.93
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -535,7 +535,7 @@
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
 // Use hardware PWM modules to drive heaters
-#define HARDWARE_PWM_HEATERS
+//#define HARDWARE_PWM_HEATERS
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
@@ -738,7 +738,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 407 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1071,7 +1071,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1875,6 +1875,7 @@
 // a pin (if BTN_ENC defined to != -1) or read through I2C (when BTN_ENC == -1).
 //
 #define LCD_I2C_PANELOLU2
+#define INVERT_BUTTON_CLICK
 #define ALTERNATE_LEDS
 
 //
